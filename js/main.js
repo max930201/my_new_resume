@@ -10,6 +10,7 @@
     var site = await loadJSON("config/site.json");
     var profile = await loadJSON("config/profile.json");
     var contact = await loadJSON("config/contact.json");
+    var skills = await loadJSON("config/skills.json");
     var projects = await loadJSON("config/projects.json");
     var milestones = await loadJSON("config/milestones.json");
     var certificates = await loadJSON("config/certificates.json");
@@ -18,6 +19,7 @@
     renderNav(nav);
     wireBrandHome();
     renderHero(profile);
+    renderSkills(skills);
     renderAbout(aboutMd);
     renderMilestones(milestones);
     renderProjects(projects);
@@ -34,6 +36,21 @@ function renderHero(profile) {
   document.getElementById("hero-role").textContent = profile.school;
   document.getElementById("hero-name").textContent = profile.displayName;
   document.getElementById("hero-tagline").textContent = profile.tagline;
+}
+
+function renderSkills(skills) {
+  var grid = document.getElementById("skills-grid");
+  if (!grid) return;
+  grid.innerHTML = skills
+    .map(function (s) {
+      return (
+        '<div class="skill-group corner-marks">' +
+        '<p class="skill-category">' + s.category + "</p>" +
+        '<p class="skill-items">' + s.items + "</p>" +
+        "</div>"
+      );
+    })
+    .join("");
 }
 
 function renderAbout(markdown) {
@@ -136,6 +153,7 @@ function renderContact(contact) {
   var list = document.getElementById("contact-list");
   var entries = [
     { key: "EMAIL", value: contact.email },
+    { key: "PHONE", value: contact.phone },
     { key: "GITHUB", value: contact.github },
     { key: "LINKEDIN", value: contact.linkedin }
   ];

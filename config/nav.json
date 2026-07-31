@@ -1,4 +1,5 @@
 [
+  { "label": "技術能力", "target": "skills" },
   { "label": "關於我", "target": "about" },
   { "label": "學習歷程", "target": "milestones" },
   { "label": "作品集", "target": "projects" },
