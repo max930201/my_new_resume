@@ -1,0 +1,74 @@
+[
+  {
+    "id": "proj-birthday-hub",
+    "title": "生日祝福網頁作品集",
+    "category": "生日祝福網頁系列",
+    "status": "持續累積中",
+    "techStack": "HTML / CSS / JavaScript（部分作品含後端資料庫）",
+    "description": "為家人、老師與朋友製作的客製化生日祝福網頁合集，目前共收錄 18 個作品，其中部分作品另外串接後端資料庫，可儲存訪客留言。",
+    "link": "works/birthday/",
+    "linkLabel": "查看完整作品清單 →",
+    "link2": "",
+    "link2Label": ""
+  },
+  {
+    "id": "proj-ya3s",
+    "title": "Ya3s 線上商城系統",
+    "category": "會員電商系統",
+    "status": "已上線",
+    "techStack": "前台商城＋會員系統＋後台管理｜會員資料存於 Firebase Firestore 的 user 資料庫｜Google Apps Script 每日同步至 Notion",
+    "description": "具備會員系統的線上商城，會員可收藏商品、查看訂單紀錄，會員資料存放在 Firebase Firestore 的 user 資料庫中；後台管理頁面僅限有權限的管理者登入，可上下架商品、管理前台頁面並查看所有訂單。前後台資料每天都會透過 Google Apps Script 自動同步至 Notion 資料庫。",
+    "link": "https://yasss-online-shop.netlify.app/",
+    "linkLabel": "前台商城 →",
+    "link2": "https://ya3s-admin-interface.netlify.app/",
+    "link2Label": "後台管理 →"
+  },
+  {
+    "id": "proj-medical-card",
+    "title": "鄒老師病人衛教卡系統",
+    "category": "醫療衛教管理系統",
+    "status": "已上線",
+    "techStack": "Firebase / Firestore｜Authentication 白名單登入｜每日自動備份",
+    "description": "提供治療師管理病人衛教資訊的系統。治療師登入後台前須先通過 Firestore Authentication 白名單驗證，才能新增與更新病人衛教資料；新增病人時系統會自動產生一組 8 位數驗證碼，作為病人登入專屬衛教卡的密碼（病人以姓名作為帳號）。系統每天固定時間會自動備份治療師與病人的資料。",
+    "link": "https://zou-therapist-medical-card.netlify.app/",
+    "linkLabel": "衛教卡系統 →",
+    "link2": "https://medical-card-system-instruction.netlify.app/",
+    "link2Label": "使用說明 →"
+  },
+  {
+    "id": "proj-factory-salary",
+    "title": "工廠薪水計算系統",
+    "category": "薪資管理工具",
+    "status": "已上線",
+    "techStack": "HTML / CSS / JavaScript｜Google Sheets 資料同步",
+    "description": "依員工上下班的簽到、簽退時間自動計算總工時，並將紀錄同步至 Google Sheet，用以計算並記錄員工薪資。",
+    "link": "https://factory-salary.netlify.app/",
+    "linkLabel": "前往系統 →",
+    "link2": "",
+    "link2Label": ""
+  },
+  {
+    "id": "proj-wash-coin",
+    "title": "洗衣店代收款記錄系統",
+    "category": "門市記帳工具",
+    "status": "已上線",
+    "techStack": "HTML / CSS / JavaScript｜Google Sheets 資料同步",
+    "description": "可自由選擇兩間洗衣店門市，記錄當天現場收取的金額，輸入完成後自動存入 Google Sheet 保存紀錄。",
+    "link": "https://wash-coin.netlify.app/",
+    "linkLabel": "前往系統 →",
+    "link2": "",
+    "link2Label": ""
+  },
+  {
+    "id": "proj-family-dinner",
+    "title": "家庭聚餐紀錄網頁",
+    "category": "生活紀錄網頁",
+    "status": "持續更新中",
+    "techStack": "HTML / CSS / JavaScript",
+    "description": "記錄家人假日聚餐的生活點滴，練習以網頁形式保存與呈現生活紀錄。",
+    "link": "https://family-sunday-dinner.netlify.app/",
+    "linkLabel": "前往網頁 →",
+    "link2": "",
+    "link2Label": ""
+  }
+]

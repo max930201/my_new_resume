@@ -1,0 +1,10 @@
+.prose {
+  max-width: 70ch;
+  font-size: 1.0625rem;
+}
+.prose h1, .prose h2, .prose h3 { margin-top: var(--space-6); }
+.prose h2 { font-size: var(--fs-h3); }
+.prose h3 { font-size: 1.125rem; color: var(--color-primary); }
+.prose p { color: var(--color-ink-soft); }
+.prose ul { padding-left: 1.2em; color: var(--color-ink-soft); }
+.prose strong { color: var(--color-ink); }

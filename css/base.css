@@ -1,0 +1,101 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  line-height: var(--lh-heading);
+  margin: 0 0 var(--space-4);
+  font-weight: 600;
+}
+
+p { margin: 0 0 var(--space-4); }
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--color-primary); }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--color-ink);
+  color: #fff;
+  padding: var(--space-2) var(--space-4);
+  z-index: 100;
+}
+.skip-link:focus {
+  left: var(--space-4);
+  top: var(--space-4);
+}
+
+.btn {
+  display: inline-block;
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-decoration: none;
+  border: var(--border-w) solid transparent;
+  transition: transform 150ms var(--ease-out-confident), background-color 150ms;
+}
+.btn-primary {
+  background: var(--color-signal);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--color-signal-strong);
+  transform: translateY(-1px);
+}
+
+.section-title {
+  font-size: var(--fs-h2);
+  margin-bottom: var(--space-6);
+  position: relative;
+  padding-bottom: var(--space-4);
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--color-primary);
+}
+
+.load-error {
+  color: var(--color-signal-strong);
+  font-size: var(--fs-small);
+}
+
+/* 共用裝飾：藍圖風格的角標記號，供照片框、作品卡片、證書卡片共用，避免各自重複撰寫 */
+.corner-marks { position: relative; }
+.corner-marks::before,
+.corner-marks::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--color-line);
+  pointer-events: none;
+}
+.corner-marks::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+.corner-marks::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+.corner-marks--accent::before,
+.corner-marks--accent::after { border-color: var(--color-primary); }

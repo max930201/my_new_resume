@@ -1,0 +1,20 @@
+[
+  { "group": "家人", "name": "爸爸的生日網頁", "url": "https://dad-hbd.netlify.app/", "note": "" },
+  { "group": "家人", "name": "媽媽的生日網頁", "url": "https://mom-hbd.netlify.app/", "note": "" },
+  { "group": "家人", "name": "姐姐的生日網頁", "url": "https://phyllies-hbd.netlify.app/", "note": "" },
+  { "group": "家人", "name": "表姑姑的生日網頁", "url": "https://liu-hsing-hbd.netlify.app/", "note": "" },
+  { "group": "朋友", "name": "龔致豪的生日網頁", "url": "https://zackyia-hbd.netlify.app/", "note": "" },
+  { "group": "朋友", "name": "思淼的生日網頁", "url": "https://si-miao-hbd.netlify.app/", "note": "後端資料庫，可儲存訪客留言" },
+  { "group": "朋友", "name": "徐振軒的生日網頁", "url": "https://enderson-hbd.netlify.app/", "note": "" },
+  { "group": "朋友", "name": "張仕翰的生日網頁", "url": "https://ditto-hbd.netlify.app/", "note": "" },
+  { "group": "朋友", "name": "呂宗展的生日網頁", "url": "https://jameslu-hbd.netlify.app/", "note": "" },
+  { "group": "家人", "name": "李瑞臻的生日網頁", "url": "https://mina-hbd.netlify.app/", "note": "" },
+  { "group": "朋友", "name": "阿辰的生日網頁", "url": "https://lin-chen-hbd.netlify.app/", "note": "" },
+  { "group": "朋友", "name": "方欣宜的生日網頁", "url": "https://eve-hbd.netlify.app/", "note": "" },
+  { "group": "朋友", "name": "翁宸品的生日網頁", "url": "https://leo-hbd.netlify.app/", "note": "" },
+  { "group": "治療師", "name": "阿慶老師的生日網頁", "url": "https://r-ching-hbd.netlify.app/", "note": "" },
+  { "group": "治療師", "name": "羿均老師的生日網頁", "url": "https://yi-chun-hbd.netlify.app/", "note": "" },
+  { "group": "治療師", "name": "育均老師的生日網頁", "url": "https://yu-chun-hbd.netlify.app/", "note": "" },
+  { "group": "治療師", "name": "鄒老師的生日網頁", "url": "https://zou-therapist-hbd.netlify.app/", "note": "" },
+  { "group": "朋友", "name": "龔致豪道別信網頁", "url": "https://zackyia-save-travels.netlify.app/", "note": "補充生日網頁未收錄的卡片" }
+]

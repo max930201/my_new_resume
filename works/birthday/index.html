@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>生日祝福網頁作品集</title>
+  <meta name="description" content="生日祝福網頁作品清單" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../../css/tokens.css" />
+  <link rel="stylesheet" href="../../css/base.css" />
+  <link rel="stylesheet" href="../../css/layout.css" />
+  <link rel="stylesheet" href="../../css/header.css" />
+  <link rel="stylesheet" href="../../css/footer.css" />
+  <link rel="stylesheet" href="../../css/birthday.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳至主要內容</a>
+
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main-content">
+    <section class="birthday-hero">
+      <div class="container">
+        <p class="hero-meta"><a class="back-link" href="/index.html#projects">← 回到作品集</a></p>
+        <h1 class="section-title">生日祝福網頁作品集</h1>
+        <p class="birthday-intro">
+          收錄我為家人、朋友與老師製作的客製化生日祝福網頁，共
+          <span id="birthday-count">18</span> 個作品。
+        </p>
+      </div>
+    </section>
+
+    <section class="birthday-list-section">
+      <div class="container" id="birthday-groups"></div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="../../js/load-components.js"></script>
+  <script src="../../js/load-data.js"></script>
+  <script src="../../js/shared-render.js"></script>
+  <script src="../../js/birthday-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+:root {
+  /* 顏色（藍圖 / 技術文件風格：冷色紙面 + 藍圖藍為主色，暖橘為唯一強調色） */
+  --color-paper: #F3F5F7;
+  --color-paper-alt: #EAEDF2;
+  --color-surface: #FFFFFF;
+  --color-ink: #10151C;
+  --color-ink-soft: #3C4550;
+  --color-line: #C7CDD6;
+  --color-primary: #2A4B8D;
+  --color-primary-strong: #1D3568;
+  --color-signal: #C8641F;
+  --color-signal-strong: #A8511A;
+  --color-focus: #2A4B8D;
+
+  /* 字型：IBM Plex 系列，Sans 搭配 Mono，呼應技術文件 / 工程紀錄的調性 */
+  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-h3: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --fs-h2: clamp(1.75rem, 1.4rem + 1.4vw, 2.25rem);
+  --fs-h1: clamp(2.25rem, 1.7rem + 2.4vw, 3.5rem);
+  --lh-body: 1.7;
+  --lh-heading: 1.2;
+
+  /* 間距（4 為基準單位） */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --border-w: 1px;
+
+  --shadow-sm: 0 1px 2px rgba(16, 21, 28, 0.08);
+  --shadow-md: 0 4px 12px rgba(16, 21, 28, 0.10);
+
+  --ease-out-confident: cubic-bezier(0.16, 1, 0.3, 1);
+  --container-w: 1120px;
+}

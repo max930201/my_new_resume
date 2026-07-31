@@ -1,0 +1,61 @@
+.birthday-hero {
+  padding-block: var(--space-8) var(--space-6);
+  background-image:
+    repeating-linear-gradient(0deg, rgba(42, 75, 141, 0.06) 0 1px, transparent 1px 32px),
+    repeating-linear-gradient(90deg, rgba(42, 75, 141, 0.06) 0 1px, transparent 1px 32px);
+  background-color: var(--color-paper);
+  border-bottom: var(--border-w) solid var(--color-line);
+}
+
+.back-link {
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.back-link:hover { text-decoration: underline; }
+
+.birthday-intro {
+  color: var(--color-ink-soft);
+  max-width: 60ch;
+}
+#birthday-count {
+  font-family: var(--font-mono);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.birthday-list-section { padding-block: var(--space-8); }
+
+.birthday-group { margin-bottom: var(--space-7); }
+.birthday-group-title {
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  border-bottom: var(--border-w) solid var(--color-line);
+  padding-bottom: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.birthday-item-list { list-style: none; margin: 0; padding: 0; }
+.birthday-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding-block: var(--space-3);
+  border-bottom: var(--border-w) solid var(--color-line);
+}
+.birthday-item-name {
+  color: var(--color-ink);
+  text-decoration: none;
+  font-weight: 500;
+}
+.birthday-item-name:hover { color: var(--color-primary); }
+.birthday-item-note {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-ink-soft);
+}

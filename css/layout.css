@@ -1,0 +1,25 @@
+.container {
+  max-width: var(--container-w);
+  margin-inline: auto;
+  padding-inline: var(--space-5);
+}
+
+main section {
+  padding-block: var(--space-9);
+}
+
+/*
+  區塊底色交錯，製造頁面的視覺節奏。
+  #projects / #certificates / #contact 裡面本身就有白色卡片（作品卡、證書卡、聯絡方式），
+  所以這幾個區塊只用「極淺的替代紙色」交錯，而不是整片改成白色，
+  避免白色卡片「融進」跟卡片同色的區塊背景、失去對比。
+*/
+#about {
+  background: var(--color-surface);
+  border-block: var(--border-w) solid var(--color-line);
+}
+
+#projects,
+#contact {
+  background: var(--color-paper-alt);
+}

@@ -1,0 +1,7 @@
+[
+  { "label": "關於我", "target": "about" },
+  { "label": "學習歷程", "target": "milestones" },
+  { "label": "作品集", "target": "projects" },
+  { "label": "證照證書", "target": "certificates" },
+  { "label": "聯絡我", "target": "contact" }
+]

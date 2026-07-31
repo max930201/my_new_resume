@@ -1,0 +1,16 @@
+[
+  {
+    "id": "cert-01",
+    "name": "初級管理師",
+    "issuer": "American ESG Sustainable Development Association",
+    "date": "2025 年 2 月至 2025 年 6 月",
+    "image": "assets/images/certs/cert-01.jpg"
+  },
+  {
+    "id": "cert-02",
+    "name": "經濟部產業AI人才培訓完訓證書",
+    "issuer": "台北市電腦公會",
+    "date": "115年6月16日",
+    "image": "assets/images/certs/cert-02.jpg"
+  }
+]
