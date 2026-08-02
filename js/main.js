@@ -70,7 +70,6 @@ function renderMilestones(milestones) {
         '<span class="milestone-marker" aria-hidden="true"></span>' +
         '<div class="milestone-content">' +
         '<div class="milestone-meta">' +
-        '<span class="milestone-version">' + m.version + "</span>" +
         '<span class="milestone-year">' + m.year + "</span>" +
         currentTag +
         "</div>" +
