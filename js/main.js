@@ -87,8 +87,8 @@ function renderMilestonesMap(milestones) {
   if (!map) return;
 
   var count = milestones.length;
-  var width = 300;
-  var nodeSpacing = 80;
+  var width = 320;
+  var nodeSpacing = 90;
   var padding = 40;
   var height = (count - 1) * nodeSpacing + padding * 2;
   var centerX = width / 2;
@@ -96,8 +96,8 @@ function renderMilestonesMap(milestones) {
   // 計算每個節點位置（左右擺動產生彎曲路徑感）
   var nodes = milestones.map(function (m, i) {
     var y = padding + i * nodeSpacing;
-    var offset = (i % 2 === 0 ? -1 : 1) * 25;
-    return { x: centerX + offset, y: y, year: m.year, label: m.label, isCurrent: i === count - 1 };
+    var offset = (i % 2 === 0 ? -1 : 1) * 20;
+    return { x: centerX + offset, y: y, year: m.year, label: m.label, mapLabel: m.mapLabel, isCurrent: i === count - 1 };
   });
 
   // 用 cubic bezier 串接平滑路徑
@@ -107,11 +107,6 @@ function renderMilestonesMap(milestones) {
     var curr = nodes[i];
     var midY = (prev.y + curr.y) / 2;
     pathD += " C " + prev.x + " " + midY + ", " + curr.x + " " + midY + ", " + curr.x + " " + curr.y;
-  }
-
-  // 截斷過長的標籤
-  function truncate(s, n) {
-    return s.length > n ? s.substring(0, n) + "…" : s;
   }
 
   // 組裝 SVG
@@ -124,7 +119,7 @@ function renderMilestonesMap(milestones) {
     svg +=
       '<text class="milestones-map-node-label" x="' + n.x + '" y="' + (n.y - 14) + '">' + n.year + "</text>" +
       '<circle class="' + nodeClass + '" cx="' + n.x + '" cy="' + n.y + '" r="6" />' +
-      '<text class="milestones-map-node-title" x="' + n.x + '" y="' + (n.y + 20) + '">' + truncate(n.label, 8) + "</text>";
+      '<text class="milestones-map-node-title" x="' + n.x + '" y="' + (n.y + 20) + '">' + (n.mapLabel || n.label) + "</text>";
   });
 
   svg += "</svg>";
