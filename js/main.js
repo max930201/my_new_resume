@@ -22,6 +22,7 @@
     renderSkills(skills);
     renderAbout(aboutMd);
     renderMilestones(milestones);
+    renderMilestonesMap(milestones);
     renderProjects(projects);
     renderCertificates(certificates);
     renderContact(contact);
@@ -79,6 +80,56 @@ function renderMilestones(milestones) {
       );
     })
     .join("");
+}
+
+function renderMilestonesMap(milestones) {
+  var map = document.getElementById("milestones-map");
+  if (!map) return;
+
+  var count = milestones.length;
+  var width = 300;
+  var nodeSpacing = 80;
+  var padding = 40;
+  var height = (count - 1) * nodeSpacing + padding * 2;
+  var centerX = width / 2;
+
+  // 計算每個節點位置（左右擺動產生彎曲路徑感）
+  var nodes = milestones.map(function (m, i) {
+    var y = padding + i * nodeSpacing;
+    var offset = (i % 2 === 0 ? -1 : 1) * 25;
+    return { x: centerX + offset, y: y, year: m.year, label: m.label, isCurrent: i === count - 1 };
+  });
+
+  // 用 cubic bezier 串接平滑路徑
+  var pathD = "M " + nodes[0].x + " " + nodes[0].y;
+  for (var i = 1; i < nodes.length; i++) {
+    var prev = nodes[i - 1];
+    var curr = nodes[i];
+    var midY = (prev.y + curr.y) / 2;
+    pathD += " C " + prev.x + " " + midY + ", " + curr.x + " " + midY + ", " + curr.x + " " + curr.y;
+  }
+
+  // 截斷過長的標籤
+  function truncate(s, n) {
+    return s.length > n ? s.substring(0, n) + "…" : s;
+  }
+
+  // 組裝 SVG
+  var svg =
+    '<svg class="milestones-map-svg" viewBox="0 0 ' + width + " " + height + '" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="學習歷程路徑圖">' +
+    '<path class="milestones-map-path" d="' + pathD + '" />';
+
+  nodes.forEach(function (n) {
+    var nodeClass = n.isCurrent ? "milestones-map-node is-current" : "milestones-map-node";
+    svg +=
+      '<text class="milestones-map-node-label" x="' + n.x + '" y="' + (n.y - 14) + '">' + n.year + "</text>" +
+      '<circle class="' + nodeClass + '" cx="' + n.x + '" cy="' + n.y + '" r="6" />' +
+      '<text class="milestones-map-node-title" x="' + n.x + '" y="' + (n.y + 20) + '">' + truncate(n.label, 8) + "</text>";
+  });
+
+  svg += "</svg>";
+
+  map.innerHTML = '<p class="milestones-map-title">JOURNEY MAP</p>' + svg;
 }
 
 function buildProjectLink(url, label) {
