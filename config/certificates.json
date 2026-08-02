@@ -12,5 +12,12 @@
     "issuer": "台北市電腦公會",
     "date": "115年6月16日",
     "image": "assets/images/certs/cert-02.jpg"
+  },
+  {
+    "id": "cert-03",
+    "name": "claude101完訓證書",
+    "issuer": "Anthropic",
+    "date": "115年6月16日",
+    "image": "assets/images/certs/cert-03.png"
   }
 ]
