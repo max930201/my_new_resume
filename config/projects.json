@@ -25,10 +25,10 @@
   },
   {
     "id": "proj-medical-card",
-    "title": "鄒老師病人衛教卡系統",
+    "title": "治療師病人衛教卡系統",
     "category": "醫療衛教管理系統",
     "status": "已上線",
-    "techStack": "Firebase / Firestore｜Authentication 白名單登入｜每日自動備份",
+    "techStack": "Firebase / Firestore｜Authentication 白名單登入｜每日自動備份至notion",
     "description": "提供治療師管理病人衛教資訊的系統。治療師登入後台前須先通過 Firestore Authentication 白名單驗證，才能新增與更新病人衛教資料；新增病人時系統會自動產生一組 8 位數驗證碼，作為病人登入專屬衛教卡的密碼（病人以姓名作為帳號）。系統每天固定時間會自動備份治療師與病人的資料。",
     "link": "https://zou-therapist-medical-card.netlify.app/",
     "linkLabel": "衛教卡系統 →",
