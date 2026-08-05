@@ -24,7 +24,8 @@
 }
 
 .about-tab.is-active {
-  color: var(--color-bg);
+  color: #ffffff;
+  font-weight: 700;
   background: var(--color-primary);
   border-color: var(--color-primary);
 }
