@@ -15,12 +15,14 @@
     var milestones = await loadJSON("config/milestones.json");
     var certificates = await loadJSON("config/certificates.json");
     var aboutMd = await loadText(profile.aboutSource);
+    var aboutMdEn = await loadText(profile.aboutSourceEn);
 
     renderNav(nav);
     wireBrandHome();
     renderHero(profile);
     renderSkills(skills);
-    renderAbout(aboutMd);
+    renderAbout(aboutMd, aboutMdEn);
+    setupAboutTabs();
     renderMilestones(milestones);
     renderMilestonesMap(milestones);
     renderProjects(projects);
@@ -54,9 +56,36 @@ function renderSkills(skills) {
     .join("");
 }
 
-function renderAbout(markdown) {
-  var container = document.getElementById("about-content");
-  container.innerHTML = renderMarkdownLite(markdown);
+function renderAbout(markdownZh, markdownEn) {
+  var containerZh = document.getElementById("about-content-zh");
+  var containerEn = document.getElementById("about-content-en");
+  containerZh.innerHTML = renderMarkdownLite(markdownZh);
+  containerEn.innerHTML = renderMarkdownLite(markdownEn);
+}
+
+function setupAboutTabs() {
+  var tabZh = document.getElementById("about-tab-zh");
+  var tabEn = document.getElementById("about-tab-en");
+  var contentZh = document.getElementById("about-content-zh");
+  var contentEn = document.getElementById("about-content-en");
+
+  tabZh.addEventListener("click", function () {
+    tabZh.classList.add("is-active");
+    tabEn.classList.remove("is-active");
+    contentZh.classList.add("is-active");
+    contentEn.classList.remove("is-active");
+    contentZh.hidden = false;
+    contentEn.hidden = true;
+  });
+
+  tabEn.addEventListener("click", function () {
+    tabEn.classList.add("is-active");
+    tabZh.classList.remove("is-active");
+    contentEn.classList.add("is-active");
+    contentZh.classList.remove("is-active");
+    contentEn.hidden = false;
+    contentZh.hidden = true;
+  });
 }
 
 function renderMilestones(milestones) {

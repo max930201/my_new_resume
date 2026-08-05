@@ -1,3 +1,38 @@
+/* 語言切換頁籤 */
+.about-lang-tabs {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.about-tab {
+  padding: var(--space-2) var(--space-4);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--color-ink-soft);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.about-tab:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.about-tab.is-active {
+  color: var(--color-bg);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.about-content[hidden] {
+  display: none;
+}
+
 .prose {
   max-width: 70ch;
   font-size: 1.0625rem;

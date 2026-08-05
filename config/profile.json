@@ -3,6 +3,7 @@
   "school": "嘉南藥理大學 資訊管理學系（進修部）",
   "tagline": "跨越意外，持續前進的資管系學生",
   "aboutSource": "content/about.md",
+  "aboutSourceEn": "content/about-en.md",
   "photoPath": "assets/images/profile-photo.jpg",
   "photoAlt": "個人照片"
 }

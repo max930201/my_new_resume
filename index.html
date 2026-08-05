@@ -60,7 +60,12 @@
     <section id="about" class="about" aria-labelledby="about-heading">
       <div class="container">
         <h2 id="about-heading" class="section-title">關於我</h2>
-        <div id="about-content" class="about-content prose">載入中…</div>
+        <div class="about-lang-tabs">
+          <button id="about-tab-zh" class="about-tab is-active" type="button" aria-controls="about-content-zh">中文版</button>
+          <button id="about-tab-en" class="about-tab" type="button" aria-controls="about-content-en">English</button>
+        </div>
+        <div id="about-content-zh" class="about-content prose is-active" role="tabpanel" aria-labelledby="about-tab-zh">載入中…</div>
+        <div id="about-content-en" class="about-content prose" role="tabpanel" aria-labelledby="about-tab-en" lang="en" hidden>載入中…</div>
       </div>
     </section>
 
