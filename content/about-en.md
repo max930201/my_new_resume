@@ -1,3 +1,17 @@
+## Personal Information
+
+| Item | Details |
+|------|---------|
+| Name | Li, Rui-Xun |
+| Date of Birth | February 1, 2004 |
+| Age | 22 |
+| Phone | +886-976-717-201 |
+| Email | max99296@gmail.com |
+| Address | |
+| Blood Type | O |
+
+---
+
 I am currently enrolled in the Department of Information Management at Chia Nan University of Pharmacy and Science, in the continuing education program. At my age, most of my peers have already graduated from university, but my academic journey began two years later than theirs.
 
 ## The Accident
